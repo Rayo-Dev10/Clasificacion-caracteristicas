@@ -1,8 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, 
+        #ffffff, #f9f9f9, #f3f3f3, #eeeeee, #e8e8e8, 
+        #e3e3e3, #dddddd, #d8d8d8, #d2d2d2, #cccccc);
     margin: 0;
     padding: 20px;
+    color: white;
 }
 
 .mindmap {
@@ -14,27 +17,33 @@ body {
 }
 
 .node {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     width: 80%;
     max-width: 600px;
     position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.node:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .node h2 {
     margin: 0 0 10px;
-    font-size: 1.2em;
-    color: #333;
+    font-size: 1.3em;
+    color: white;
 }
 
 .node p {
     margin: 0;
-    font-size: 0.9em;
-    color: #555;
+    font-size: 1em;
+    color: #e0e0e0;
 }
 
 .node::before {
@@ -43,21 +52,21 @@ body {
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .root-node {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #006400, #228B22);
     color: white;
     text-align: center;
     font-size: 1.5em;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .root-node::before {
@@ -65,14 +74,16 @@ body {
 }
 
 .category {
-    background-color: #2196F3;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
     color: white;
     font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .subcategory {
-    background-color: #FFC107;
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
     color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 768px) {
